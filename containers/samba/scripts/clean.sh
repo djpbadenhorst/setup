@@ -1,1 +1,1 @@
-docker rm -f directus
+docker rm -f samba
