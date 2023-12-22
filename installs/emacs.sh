@@ -1,5 +1,7 @@
-sudo apt install emacs
+sudo apt install -y emacs
 
+mkdir -p ~/.emacs.d
+echo "" > ~/.emacs.d/init.el
 cat << EOF > ~/.emacs.d/init.el
 ;; Location of backup files
 (setq backup-directory-alist '(("." . "~/.saves")))

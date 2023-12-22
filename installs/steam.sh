@@ -1,1 +1,1 @@
-sudo apt install steam
+sudo apt install -y steam

@@ -1,1 +1,1 @@
-sudo apt install blender
+sudo apt install -y blender

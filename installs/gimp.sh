@@ -1,1 +1,1 @@
-sudo apt install gimp
+sudo apt install -y gimp
