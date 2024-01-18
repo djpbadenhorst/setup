@@ -17,10 +17,10 @@ sudo apt install -y gnupg rng-tools
 wget https://github.com/gopasspw/gopass/releases/download/v1.15.11/gopass_1.15.11_linux_amd64.deb
 sudo dpkg -i gopass_1.15.11_linux_amd64.deb
 
-ssh-add - <<< $(lpass show --notes pers/github)
+ssh-add - <<< $(lpass show --notes pers/github_ssh_key)
 lpass show --notes pers/gopass_gpg_key | gpg --import
 lpass show --notes pers/gopass_gpg_secret | gpg --import
 
-gopass --yes setup --name "djpbadenhorst" --email "djpbadenhorst@gmail.com"
-gopass clone git@github.com:djpbadenhorst/secrets.git pers
+gopass init djpbadenhorst
+gopass clone git@github.com:djpbadenhorst/secrets.git pers djpbadenhorst
 ```
