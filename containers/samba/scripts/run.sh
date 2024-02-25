@@ -1,11 +1,13 @@
 mkdir -p ~/Workspace/storage/shared
+echo "Enter Password:"
+read SAMBA_PASSWORD
 docker run -d \
        --network=host \
        --privileged=true \
        -e "MODEL=TimeCapsule" \
        -e "AVAHI_NAME=shared" \
        -e "SAMBA_CONF_LOG_LEVEL=3" \
-       -e "ACCOUNT_djpb=djpb" \
+       -e "ACCOUNT_djpb="$SAMBA_PASSWORD \
        -e "UID_djpb=1000" \
        -e "SAMBA_VOLUME_CONFIG_djpb=[djpb]; path=/shares/homes/%U; valid users = djpb; guest ok = no; read only = no; browseable = yes" \
        -v /etc/avahi/services/:/external/avahi \
