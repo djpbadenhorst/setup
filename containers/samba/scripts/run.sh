@@ -1,4 +1,7 @@
 mkdir -p ~/Workspace/storage/shared
+#echo "Input password" 
+#read SAMBA_PASSWORD
+#echo $SAMBA_PASSWORD
 docker run -d \
        --network=host \
        --privileged=true \
