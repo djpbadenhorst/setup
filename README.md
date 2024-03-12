@@ -24,3 +24,4 @@ lpass show --notes pers/gopass_gpg_secret | gpg --import
 gopass init djpbadenhorst
 gopass clone git@github.com:djpbadenhorst/secrets.git pers djpbadenhorst
 ```
+x
