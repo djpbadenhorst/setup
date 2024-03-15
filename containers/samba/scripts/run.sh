@@ -1,8 +1,8 @@
-mkdir -p ~/Workspace/storage/shared
+mkdir -p ~/Workspace/storage
 echo "Enter Password:"
 read SAMBA_PASSWORD
 docker run -d \
-       --network=host \
+       --net=host \
        --privileged=true \
        -e "MODEL=TimeCapsule" \
        -e "AVAHI_NAME=shared" \
@@ -11,6 +11,6 @@ docker run -d \
        -e "UID_djpb=1000" \
        -e "SAMBA_VOLUME_CONFIG_djpb=[djpb]; path=/shares/homes/%U; valid users = djpb; guest ok = no; read only = no; browseable = yes" \
        -v /etc/avahi/services/:/external/avahi \
-       -v ~/Workspace/storage/shared:/shares/homes \
+       --mount type=bind,src=/home/djpb/Workspace/storage/,dst=/shares/homes/djpb/ \
        --restart=always \
        --name=samba ghcr.io/servercontainers/samba

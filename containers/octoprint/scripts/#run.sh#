@@ -1,6 +1,0 @@
-docker run -d \
-       -p 80:80 \
-       --device /dev/ttyUSB0:/dev/ttyUSB0 \
-       -v ~/octoprint:/octoprint \
-       --restart=always \
-       --name octoprint octoprint/octoprint
