@@ -17,3 +17,7 @@ docker run -d \
        --mount type=bind,src=/home/djpb/Workspace/storage/,dst=/home/ubuntu/storage/ \
        --restart=always \
        --name=kodi kodi
+
+docker cp ./docker/NFAuthentication.key kodi:/home/ubuntu
+docker exec -it kodi sudo apt install kodi-inputstream-adaptive
+#CODE: 7048
