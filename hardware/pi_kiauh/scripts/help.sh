@@ -1,3 +1,3 @@
 echo "Options:"
+echo "download"
 echo "install"
-echo "setup"

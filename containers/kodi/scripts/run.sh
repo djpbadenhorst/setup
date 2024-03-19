@@ -20,4 +20,4 @@ docker run -d \
 
 docker cp ./docker/NFAuthentication.key kodi:/home/ubuntu
 docker exec -it kodi sudo apt install kodi-inputstream-adaptive
-#CODE: 7048
+#PIN: 2580
