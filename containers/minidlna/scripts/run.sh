@@ -8,6 +8,6 @@ docker run -d \
     -e MINIDLNA_ENABLE_INOTIFY=YES \
     -e MINIDLNA_FRIENDLY_NAME=minidlna \
     -e MINIDLNA_FORCE_SORT_CRITERIA=+upnp:class,-dc:date,+upnp:album,+upnp:originalTrackNumber,+dc:title \
-    --mount type=bind,src=/home/djpb/.docker/data/qbittorrent/private,dst=/files/ \
+    --mount type=bind,src=/home/djpb/.docker/data/qbittorrent-private/private,dst=/files/ \
     --restart=always \
     giof71/minidlna
