@@ -1,1 +1,0 @@
-rm ./arduino.AppImage
