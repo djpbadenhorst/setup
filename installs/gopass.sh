@@ -1,4 +1,4 @@
-sudo apt install -y gnupg rng-tools
+sudo apt install -y gnupg rng-tools wget git
 export ARCH=$(arch)
 if [ $ARCH == "x86_64" ]
 then
