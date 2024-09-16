@@ -1,13 +1,10 @@
-#wget https://github.com/tellerops/teller/releases/download/v1.5.6/teller_1.5.6_Linux_x86_64.tar.gz
-#tar -xvf teller_1.5.6_Linux_x86_64.tar.gz
-#rm LICENSE.txt
-#rm README.md
-#rm teller_1.5.6_Linux_x86_64.tar.gz
-#sudo mv teller /usr/bin/
+wget https://github.com/tellerops/teller/releases/download/v2.0.7/teller-x86_64-linux.tar.xz
+tar -xvf teller-x86_64-linux.tar.xz
+sudo mv teller-x86_64-linux/teller /usr/bin/
 
-git clone https://github.com/tellerops/teller
-cd teller
-make build
-sudo mv teller /usr/bin
-cd ../
-rm -rf teller
+curl -LO "http://nz2.archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2.23_amd64.deb"
+sudo dpkg -i libssl1.1_1.1.1f-1ubuntu2.23_amd64.deb
+
+rm libssl1.1_1.1.1f-1ubuntu2.23_amd64.deb
+rm teller-x86_64-linux.tar.xz
+rm -rf teller-x86_64-linux/
