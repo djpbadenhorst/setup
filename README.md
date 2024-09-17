@@ -18,7 +18,8 @@ lpass show --notes pers/gopass_gpg_key | gpg --import
 lpass show --notes pers/gopass_gpg_secret | gpg --import
 
 gopass init djpbadenhorst
-gopass clone git@github.com:djpbadenhorst/secrets.git pers djpbadenhorst
+git clone git@github.com:djpbadenhorst/secrets.git ~/.local/share/gopass/stores/root/pers
+gopass mounts add pers ~/.local/share/gopass/stores/root/pers/
 ```
 
 ## GIT ORIGIN
