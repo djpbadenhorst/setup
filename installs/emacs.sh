@@ -90,6 +90,15 @@ cat << EOF > ~/.emacs.d/init.el
 ;; Ensure highlighted text is overwritten
 (delete-selection-mode 1)
 
+;; Ensure bindings for hs-minor-mode
+(bind-keys :prefix-map hs-minor-mode-prefix-map
+	   :prefix "M-2"
+	   ("<up>" . hs-hide-all)
+	   ("<down>" . hs-show-all)
+	   ("<left>" . hs-hide-block)
+	   ("<right>" . hs-show-block)
+	   )
+
 ;; Allows for multiple screens
 (use-package elscreen
   :ensure t
