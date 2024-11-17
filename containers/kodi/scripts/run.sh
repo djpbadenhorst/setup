@@ -2,7 +2,8 @@ mkdir -p /home/djpb/Workspace/storage
 docker run -d   \
        --privileged \
        --name=kodi \
-       -p 3000:3000 \
+       --network=host \
+       --memory=4g \
        -v /dev/input:/dev/input \
        -v /run/udev/data:/run/udev/data \
        -v /home/djpb/.docker/data/kodi:/config/.kodi/ \
@@ -17,8 +18,8 @@ echo "sudo chown abc:abc /config/.kodi/"
 echo "nano /config/.config/openbox/autostart"
 echo "> kodi"
 echo ""
-echo "nano /kclient/index.js"
-echo "> chunk.length < 40000"
+echo "docker restart kodi"
 
-docker cp ./docker/NFAuthentication.key kodi:/config/
-#PIN: 3445
+echo "Plugins can be installed from:"
+echo " - https://castagnait.github.io/repository.castagnait/"
+echo " - https://glk1001.github.io"
