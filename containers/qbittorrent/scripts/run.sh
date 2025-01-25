@@ -23,4 +23,4 @@ docker run -d \
        --restart=always \
        ghcr.io/hotio/qbittorrent
 
-#/app/vuetorrent
+echo "Set GUI to /app/vuetorrent"

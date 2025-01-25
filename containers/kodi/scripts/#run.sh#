@@ -13,11 +13,11 @@ docker run -d   \
        kodi
 
 echo "docker exec -it kodi bash"
-
+echo ""
 echo "sudo chown abc:abc /config/.kodi/"
 echo "nano /config/.config/openbox/autostart"
 echo "> kodi"
-
+echo ""
 echo "docker restart kodi"
 
 echo "Plugins can be installed from:"

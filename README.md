@@ -2,10 +2,12 @@
 This readme describes required setup for a variety of programs on a variety of architectures.
 
 ## LPASS
-Install lpass as follows:
+Install lpass:
 ```
 bash ./installs/lastpass.sh
-export LPASS_DISABLE_PINENTRY=1
+echo "" >> ~/.bashrc
+echo "export LPASS_DISABLE_PINENTRY=1" >> ~/.bashrc
+source ~/.bashrc
 eval $(ssh-agent)
 ssh-add - <<< $(lpass show --notes pers/github_ssh_key)
 ```
