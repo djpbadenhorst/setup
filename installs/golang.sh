@@ -8,5 +8,5 @@ gvm use go1.4
 gvm install go1.17.13
 gvm use go1.17.13
 
-gvm install go1.20.7
-gvm use go1.20.7
+gvm install go1.21.3
+gvm use go1.21.3
